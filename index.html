@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Edgar Joshua James Miranda</title>
+    <meta name="description" content="Course home page for WDD 231">
+    <meta name="author" content="Edgar Joshua James Miranda">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Llama SOLAMENTE a un archivo CSS principal -->
+    <link rel="stylesheet" href="styles/small.css">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <svg class="logo" width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="5" width="90" height="90" rx="20" fill="#2563EB"/>
+                <path d="M35 30 L15 50 L35 70 M65 30 L85 50 L65 70" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span>Edgar Joshua James Miranda</span>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menuButton" aria-label="Toggle Navigation Menu">&#9776;</button>
+        <ul id="navMenu">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <div class="grid-container">
+            <!-- About Me Section -->
+            <section class="card main-info">
+                <h2>About Me</h2>
+                <p>Hi! I am Edgar, a first-year student currently pursuing the Web and Computer Programming certificate. I love exploring frontend technologies, building interactive user interfaces, and learning how to create clean, responsive websites that look great on any device.</p>
+            </section>
+
+            <!-- Student Photo Section -->
+            <section class="card profile-photo-card">
+                <h2>Student Photo</h2>
+                <div class="photo-placeholder">
+                    <img src="images/profile.jpg" alt="Edgar Joshua James Miranda" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="image-text-fallback"></span>
+                </div>
+            </section>
+
+            <!-- Local Information Section -->
+            <section class="card local-info">
+                <h2>Local Information</h2>
+                <p><strong>Location:</strong> Cochabamba, Bolivia</p>
+                <p><strong>Current Certificate:</strong> Web and Computer Programming</p>
+            </section>
+
+            <!-- Web Certificate Courses Section -->
+            <section class="card courses-section">
+                <h2>Web Certificate Courses</h2>
+                
+                <div class="filters">
+                    <button id="btnAll" class="btn active">All</button>
+                    <button id="btnWdd" class="btn">WDD</button>
+                    <button id="btnCse" class="btn">CSE</button>
+                </div>
+
+                <div id="courseContainer" class="course-grid"></div>
+
+                <p class="credits-total">The total credits for courses listed above is <span id="totalCredits">0</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/JoshuaJames7756" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> | Edgar Joshua James Miranda | Cochabamba, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

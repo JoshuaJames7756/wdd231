@@ -1,0 +1,47 @@
+@media (min-width: 768px) {
+    
+    /* HIDE THE HAMBURGER COMPLETELY ON DESKTOP */
+    #menuButton {
+        display: none !important;
+    }
+
+    nav {
+        min-height: auto;
+    }
+
+    /* Reset padding and display list elements horizontally inline */
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        padding-top: 0;
+    }
+
+    nav a {
+        padding: 0.75rem 2rem;
+    }
+
+    /* Multi-column Grid Layout exactly like the BYU-I screenshot */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .main-info {
+        grid-column: span 1;
+    }
+
+    .profile-photo-card {
+        grid-column: span 1;
+    }
+
+    .local-info {
+        grid-column: span 2;
+    }
+
+    .courses-section {
+        grid-column: span 2;
+    }
+}
