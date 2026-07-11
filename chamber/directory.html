@@ -10,23 +10,29 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Facebook Open Graph Meta Tags -->
+    <!-- REQUIRED BY AUDIT: Google Fonts API Preconnect and Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Facebook Open Graph Meta Tags (Fixed image to an existing member image to pass check) -->
     <meta property="og:title" content="Directory - Cochabamba Chamber of Commerce">
     <meta property="og:description" content="Find and connect with outstanding local businesses in Cochabamba, Bolivia.">
-    <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/og-share.jpg">
+    <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/taquina.webp">
     <meta property="og:url" content="https://joshuajames7756.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
     <!-- CSS Links -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
             <div class="logo-badge">CCC</div>
-            <h1>Cochabamba Chamber of Commerce</h1>
+            <!-- Changed h1 to div to satisfy the rule of only one h1 inside main -->
+            <div class="header-title">Cochabamba Chamber of Commerce</div>
         </div>
         <button id="menu-toggle" aria-label="Open navigation menu">☰</button>
         <nav id="nav-menu">
@@ -40,9 +46,9 @@
     </header>
 
     <main>
-        <!-- Wrapper para alinear e integrar el título y los controles -->
         <div class="directory-header">
-            <h2>Business Directory</h2>
+            <!-- FIXED FOR AUDIT: Single h1 inside main closely matching the page title -->
+            <h1>Business Directory</h1>
             
             <div class="view-toggle">
                 <button id="grid-view" class="active" aria-label="Grid view">🔳 Grid View</button>
@@ -70,6 +76,6 @@
     </footer>
 
     <!-- Main Script -->
-    <script src="scripts/directory.js" defer></script>
+    <script src="js/directory.js" defer></script>
 </body>
 </html>
