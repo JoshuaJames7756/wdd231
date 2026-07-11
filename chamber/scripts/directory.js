@@ -40,9 +40,10 @@ function displayMembers(members) {
         const card = document.createElement("section");
         card.className = "member-card";
 
+        // FIXED: Changed <h3> to <h2> to preserve strict heading hierarchy (h1 -> h2)
         card.innerHTML = `
             <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="200" height="100">
-            <h3>${member.name}</h3>
+            <h2>${member.name}</h2>
             <p class="address">${member.address}</p>
             <p class="phone">${member.phone}</p>
             <p class="website"><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>

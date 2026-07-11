@@ -105,7 +105,7 @@ header {
     font-size: 1.6rem;
 }
 
-/* --- Modernized View Toggle Buttons --- */
+/* --- View Toggle Buttons --- */
 .view-toggle button {
     padding: 0.6rem 1.4rem;
     font-size: 0.95rem;
@@ -122,11 +122,6 @@ header {
 
 .view-toggle button.active {
     background-color: #003366;
-    color: white;
-}
-
-.view-toggle button:hover {
-    background-color: #002244;
     color: white;
 }
 
@@ -159,9 +154,11 @@ header {
     display: block;
 }
 
-.grid-layout .member-card h3 {
+/* Updated styles to target h2 inside grid layout cards */
+.grid-layout .member-card h2 {
     margin: 0.5rem 0;
     color: #003366;
+    font-size: 1.25rem;
 }
 
 .grid-layout .member-card p {
@@ -190,9 +187,11 @@ header {
     display: none;
 }
 
-.list-layout .member-card h3 {
+/* Updated styles to target h2 inside list layout cards */
+.list-layout .member-card h2 {
     margin: 0 0 0.5rem 0;
     color: #003366;
+    font-size: 1.15rem;
 }
 
 .list-layout .member-card p {
@@ -200,7 +199,7 @@ header {
     font-size: 0.9rem;
 }
 
-/* --- Compact Mobile Footer --- */
+/* --- Footer --- */
 footer {
     background-color: #222222;
     color: #ffffff;
@@ -219,8 +218,4 @@ footer {
 .footer-contact h3 {
     margin: 0 0 0.3rem 0;
     font-size: 1.1rem;
-}
-
-.footer-contact p, .footer-info p {
-    margin: 0.15rem 0;
 }

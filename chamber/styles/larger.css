@@ -29,7 +29,6 @@
         padding: 0.5rem 1rem;
     }
 
-    /* Horizontal Alignment for Header Title and Controls */
     .directory-header {
         display: flex;
         justify-content: space-between;
@@ -41,10 +40,6 @@
     .directory-header h1 {
         margin: 0;
         text-align: left;
-    }
-
-    .view-toggle {
-        margin: 0;
     }
 
     /* 3-Column Grid Distribution */
@@ -68,7 +63,8 @@
         padding: 0.75rem 1rem;
     }
 
-    .list-layout .member-card h3 {
+    /* Target h2 inside desktop row elements */
+    .list-layout .member-card h2 {
         flex: 1.5;
         margin: 0;
     }
@@ -86,7 +82,6 @@
         text-align: right;
     }
 
-    /* --- Balanced Ultra-Compact Footer --- */
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
