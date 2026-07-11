@@ -1,0 +1,225 @@
+/* --- Base Rules & Box Sizing --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: white;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-badge {
+    background-color: #ffffff;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 2px solid #002244;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.logo-container h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+}
+
+/* --- Responsive Navigation Menu --- */
+#nav-menu {
+    display: none;
+    background-color: #002244;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#nav-menu.open {
+    display: block;
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #003366;
+}
+
+#nav-menu ul li a.active {
+    background-color: #004488;
+    font-weight: bold;
+}
+
+/* --- Centered Header Title & Controls --- */
+.directory-header {
+    max-width: 1200px;
+    margin: 1.5rem auto 1rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.directory-header h2 {
+    color: #003366;
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+}
+
+/* --- Modernized View Toggle Buttons --- */
+.view-toggle button {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #003366;
+    border: 2px solid #003366;
+    border-radius: 20px;
+    margin: 0 0.4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+}
+
+.view-toggle button.active {
+    background-color: #003366;
+    color: white;
+}
+
+.view-toggle button:hover {
+    background-color: #002244;
+    color: white;
+}
+
+/* --- Dynamic Directory Component Layouts --- */
+#directory-container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.grid-layout .member-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.grid-layout .member-card img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 1rem auto;
+    display: block;
+}
+
+.grid-layout .member-card h3 {
+    margin: 0.5rem 0;
+    color: #003366;
+}
+
+.grid-layout .member-card p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+}
+
+.grid-layout .member-card .website a {
+    color: #004488;
+    font-weight: bold;
+}
+
+.list-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-layout .member-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.list-layout .member-card img {
+    display: none;
+}
+
+.list-layout .member-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #003366;
+}
+
+.list-layout .member-card p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+/* --- Compact Mobile Footer --- */
+footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-contact h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+.footer-contact p, .footer-info p {
+    margin: 0.15rem 0;
+}

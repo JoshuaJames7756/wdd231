@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Taquiña",
+    "address": "Av. Centenario Km 5.5, Cochabamba",
+    "phone": "+591 4 4282020",
+    "website": "https://www.cbn.bo",
+    "image": "taquina.webp",
+    "level": 3
+  },
+  {
+    "name": "Pil Andina",
+    "address": "Av. Blanco Galindo Km 10.5, Cochabamba",
+    "phone": "+591 4 4434800",
+    "website": "https://www.pilandina.com.bo",
+    "image": "pil-andina.webp",
+    "level": 3
+  },
+  {
+    "name": "Manaco",
+    "address": "Av. de la Integración, Quillacollo, Cochabamba",
+    "phone": "+591 4 4260124",
+    "website": "https://www.manaco.com.bo",
+    "image": "manaco.webp",
+    "level": 2
+  },
+  {
+    "name": "Hipermaxi Cochabamba",
+    "address": "Av. Juan de la Rosa y Av. América, Cochabamba",
+    "phone": "+591 4 4485600",
+    "website": "https://www.hipermaxi.com",
+    "image": "hipermaxi.webp",
+    "level": 2
+  },
+  {
+    "name": "IC Norte",
+    "address": "Av. América E-1045, Cochabamba",
+    "phone": "+591 4 4457700",
+    "website": "https://www.icnorte.com.bo",
+    "image": "ic-norte.webp",
+    "level": 3
+  },
+  {
+    "name": "Quantum Motors",
+    "address": "Av. Blanco Galindo Km 2.5, Cochabamba",
+    "phone": "+591 4 4420042",
+    "website": "https://tuquantum.com",
+    "image": "quantum.webp",
+    "level": 2
+  },
+  {
+    "name": "Jalasoft",
+    "address": "Av. Melchor Pérez de Olguín N-18, Cochabamba",
+    "phone": "+591 4 4409300",
+    "website": "https://www.jalasoft.com",
+    "image": "jalasoft.webp",
+    "level": 3
+  }
+]

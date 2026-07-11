@@ -1,0 +1,106 @@
+@media only screen and (min-width: 64rem) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #nav-menu {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    #nav-menu ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    #nav-menu ul li a {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Elegant Horizontal Alignment for Header Title and Controls */
+    .directory-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        margin: 2rem auto 1rem auto;
+    }
+
+    .directory-header h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .view-toggle {
+        margin: 0;
+    }
+
+    /* 3-Column Grid Distribution */
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Clean Rows for List View */
+    .list-layout {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .list-layout .member-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 0.75rem 1rem;
+    }
+
+    .list-layout .member-card h3 {
+        flex: 1.5;
+        margin: 0;
+    }
+    
+    .list-layout .member-card .address,
+    .list-layout .member-card .phone,
+    .list-layout .member-card .website,
+    .list-layout .member-card .membership-level {
+        flex: 2;
+        margin: 0 0.5rem;
+    }
+    
+    .list-layout .member-card .membership-level {
+        flex: 1;
+        text-align: right;
+    }
+
+    /* --- Balanced Ultra-Compact Footer --- */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.5rem 0;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .footer-info {
+        text-align: right;
+    }
+}

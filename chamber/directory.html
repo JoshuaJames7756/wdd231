@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - Cochabamba Chamber of Commerce</title>
+    <meta name="description" content="Official member directory of the Cochabamba Chamber of Commerce. Developed by Edgar Joshua James Miranda for WDD 231.">
+    <meta name="author" content="Edgar Joshua James Miranda">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Directory - Cochabamba Chamber of Commerce">
+    <meta property="og:description" content="Find and connect with outstanding local businesses in Cochabamba, Bolivia.">
+    <meta property="og:image" content="https://edgarjoshuajames.github.io/wdd231/chamber/images/og-share.jpg">
+    <meta property="og:url" content="https://edgarjoshuajames.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">CCC</div>
+            <h1>Cochabamba Chamber of Commerce</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Open navigation menu">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Wrapper para alinear e integrar el título y los controles -->
+        <div class="directory-header">
+            <h2>Business Directory</h2>
+            
+            <div class="view-toggle">
+                <button id="grid-view" class="active" aria-label="Grid view">🔳 Grid View</button>
+                <button id="list-view" aria-label="List view">☰ List View</button>
+            </div>
+        </div>
+
+        <!-- Dynamic Content Container -->
+        <div id="directory-container" class="grid-layout"></div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Cochabamba Chamber of Commerce</h3>
+                <p>📍 Ballivián Ave N-782, Cochabamba, Bolivia</p>
+                <p>📞 +591 4 4251234 | ✉️ info@camaracbba.bo</p>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="current-year"></span> | Edgar Joshua James Miranda | Cochabamba, Bolivia</p>
+                <p>Course: WDD 231 | Web Frontend Development I</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="js/directory.js" defer></script>
+</body>
+</html>
