@@ -15,6 +15,18 @@ body {
     color: #333333;
 }
 
+/* Helper para accesibilidad - Oculta elementos visualmente pero los mantiene para lectores de pantalla y auditorías */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 /* --- Shared Header & Navigation (Consistente para index y directory) --- */
 header {
     display: flex;
@@ -60,17 +72,24 @@ header {
 /* Botón de menú elegante y con transición (sin emojis toscos) */
 #menu-toggle {
     font-size: 1.8rem;
+    font-weight: 300;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     padding: 0.2rem 0.5rem;
     line-height: 1;
-    transition: transform 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease, color 0.2s ease;
 }
 
 #menu-toggle:active {
     transform: scale(0.9);
+}
+
+#menu-toggle.open {
+    transform: rotate(90deg);
+    color: #ffb300;
 }
 
 #nav-menu {
@@ -115,6 +134,13 @@ header {
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Asegura el contenedor relativo de todas las tarjetas para posicionar los badges correctamente */
+.grid-layout .member-card,
+.list-layout .member-card,
+.spotlight-card {
+    position: relative;
 }
 
 /* ==========================================================================
@@ -240,7 +266,6 @@ header {
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    position: relative;
 }
 
 .spotlight-card h3 {
@@ -308,11 +333,6 @@ header {
     width: 100%;
 }
 
-/* Regla común para asegurar que las tarjetas siempre contengan absolutamente sus elementos internos */
-.member-card {
-    position: relative !important; /* SOLUCIÓN: Forza a los badges a quedarse dentro de la tarjeta */
-}
-
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -377,12 +397,10 @@ header {
     gap: 1rem;
 }
 
-/* SOLUCIÓN BADGE: Se añade position relative explícito también para las tarjetas en list-layout */
 .list-layout .member-card {
-    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 1.2rem 6rem 1.2rem 1.2rem; /* Añade un espacio extra a la derecha para que el badge no pise el texto */
+    padding: 1.2rem 6rem 1.2rem 1.2rem;
     background-color: white;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -407,7 +425,7 @@ header {
 /* Estilos para las Insignias del Directorio */
 .member-card .badge {
     position: absolute;
-    top: 15px; /* Ajustado para que se alinee mejor visualmente */
+    top: 15px;
     right: 15px;
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;

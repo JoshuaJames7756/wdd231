@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Cochabamba Chamber of Commerce</title>
-    <meta name="description" content="Welcome to the Cochabamba Chamber of Commerce. Connecting, supporting, and growing local businesses in Cochabamba, Bolivia. Developed by Edgar Joshua James Miranda for WDD 231.">
+    <meta name="description" content="Official home page of the Cochabamba Chamber of Commerce. Connecting, supporting, and growing local businesses in Cochabamba, Bolivia.">
     <meta name="author" content="Edgar Joshua James Miranda">
     
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -40,55 +40,54 @@
         </nav>
     </header>
 
-    <main class="home-grid">
-        <section class="hero-container">
-            <picture>
-                <source media="(min-width: 64rem)" srcset="images/hero-large.jpg">
-                <img src="images/hero-small.jpg" alt="Panoramic view of Cochabamba city" class="hero-img" loading="eager">
-            </picture>
-            <div class="hero-cta">
-                <h3>Empower Your Business</h3>
-                <p>Join the largest professional network in Cochabamba and accelerate your brand's growth.</p>
-                <a href="#" class="cta-button">Join the Chamber</a>
-            </div>
-        </section>
+    <main>
+        <h1 class="visually-hidden">Cochabamba Chamber of Commerce</h1>
 
-        <section class="card events-card">
-            <h3>Upcoming Events</h3>
-            <hr>
-            <ul class="events-list">
-                <li>
-                    <strong>International Cochabamba Fair (FEICOBOL)</strong>
-                    <p>The largest trade, business, and networking showcase in the region held at Alalay.</p>
-                </li>
-                <li>
-                    <strong>Digital Transformation Workshop</strong>
-                    <p>Learn actionable e-commerce strategies for local SMEs this weekend.</p>
-                </li>
-            </ul>
-        </section>
+        <div class="home-grid">
+            <section class="hero-container">
+                <picture>
+                    <source srcset="images/hero-large.jpg" media="(min-width: 64rem)">
+                    <img src="images/hero-small.jpg" alt="Panoramic view of Cochabamba city" class="hero-img" width="1200" height="400">
+                </picture>
+                <div class="hero-cta">
+                    <h3>Empowering Cochabamba Businesses</h3>
+                    <p>Join our network of local professionals and drive your business forward.</p>
+                    <a href="#" class="cta-button">Join the Chamber</a>
+                </div>
+            </section>
 
-        <section class="card weather-card">
-            <h3>Weather in Cochabamba</h3>
-            <hr>
-            <div class="weather-info">
-                <div class="current-weather">
+            <section class="weather-card card">
+                <h3>Current Weather</h3>
+                <div class="weather-info">
                     <p class="temp-display" id="current-temp">--°C</p>
-                    <p class="desc-display" id="weather-desc">Loading weather...</p>
+                    <p class="desc-display" id="weather-desc">Loading...</p>
                 </div>
-                <div class="forecast-section">
-                    <h4>3-Day Forecast</h4>
-                    <div id="forecast-container" class="forecast-list">
-                        </div>
-                </div>
-            </div>
-        </section>
+                <hr>
+                <h4>3-Day Forecast</h4>
+                <div class="forecast-list" id="forecast-container">
+                    </div>
+            </section>
 
-        <section class="spotlights-section">
-            <h3>Featured Members</h3>
-            <div id="spotlights-container" class="spotlights-grid">
-                </div>
-        </section>
+            <section class="events-card card">
+                <h3>Upcoming Events</h3>
+                <ul class="events-list">
+                    <li>
+                        <strong>Business Networking Night</strong>
+                        <p>📅 Thursday, 7:00 PM | 📍 Gran Hotel Cochabamba</p>
+                    </li>
+                    <li>
+                        <strong>Digital Marketing Workshop</strong>
+                        <p>📅 Next Tuesday, 3:00 PM | 📍 CCC Conference Hall</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="spotlights-section card">
+                <h3>Member Spotlights</h3>
+                <div class="spotlights-grid" id="spotlights-container">
+                    </div>
+            </section>
+        </div>
     </main>
 
     <footer>
