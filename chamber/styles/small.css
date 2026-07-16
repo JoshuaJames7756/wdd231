@@ -1,3 +1,7 @@
+/* ==========================================================================
+   W03: CHAMBER PROJECT - BASE STYLES (Móvil desde 320px) - small.css
+   ========================================================================== */
+
 /* --- Base Rules & Box Sizing --- */
 * {
     box-sizing: border-box;
@@ -11,6 +15,7 @@ body {
     color: #333333;
 }
 
+/* --- Shared Header & Navigation (Consistente para index y directory) --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,12 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
+.logo-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .header-title {
     font-size: 1.1rem;
     font-weight: bold;
@@ -46,6 +57,7 @@ header {
     line-height: 1.2;
 }
 
+/* Botón de menú elegante y con transición (sin emojis toscos) */
 #menu-toggle {
     font-size: 1.8rem;
     background: none;
@@ -53,9 +65,14 @@ header {
     color: white;
     cursor: pointer;
     padding: 0.2rem 0.5rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
 }
 
-/* --- Responsive Navigation Menu --- */
+#menu-toggle:active {
+    transform: scale(0.9);
+}
+
 #nav-menu {
     display: none;
     background-color: #002244;
@@ -91,7 +108,169 @@ header {
     font-weight: bold;
 }
 
-/* --- Centered Header Title & Controls --- */
+/* --- Compartido: Estructura de Tarjetas Base --- */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   SECCIÓN A: ESTILOS DE LA PÁGINA DE INICIO (index.html)
+   ========================================================================== */
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-cta {
+    background-color: rgba(0, 51, 102, 0.9);
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.hero-cta h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #ffb300;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffb300;
+    color: #002244;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffa000;
+}
+
+/* Eventos y Clima */
+.events-card h3,
+.weather-card h3,
+.spotlights-section h3 {
+    color: #003366;
+    margin-top: 0;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.temp-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #003366;
+}
+
+.desc-display {
+    text-transform: capitalize;
+    font-style: italic;
+    color: #666666;
+    margin: 0 0 1rem 0;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+/* Spotlights */
+.spotlights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.spotlight-card h3 {
+    color: #003366;
+    margin: 0.5rem 0;
+}
+
+.spotlight-card img {
+    max-height: 60px;
+    max-width: 150px;
+    margin: 0 auto 1rem auto;
+    display: block;
+    object-fit: contain;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.badge.gold { background-color: #ffd700; color: #222; }
+.badge.silver { background-color: #c0c0c0; color: #222; }
+
+/* ==========================================================================
+   SECCIÓN B: ESTILOS DE LA PÁGINA DEL DIRECTORIO (directory.html)
+   ========================================================================== */
 .directory-header {
     max-width: 1200px;
     margin: 1.5rem auto 1rem auto;
@@ -105,7 +284,6 @@ header {
     font-size: 1.6rem;
 }
 
-/* --- View Toggle Buttons --- */
 .view-toggle button {
     padding: 0.6rem 1.4rem;
     font-size: 0.95rem;
@@ -125,10 +303,14 @@ header {
     color: white;
 }
 
-/* --- Dynamic Directory Component Layouts --- */
 #directory-container {
     padding: 1rem;
     width: 100%;
+}
+
+/* Regla común para asegurar que las tarjetas siempre contengan absolutamente sus elementos internos */
+.member-card {
+    position: relative !important; /* SOLUCIÓN: Forza a los badges a quedarse dentro de la tarjeta */
 }
 
 .grid-layout {
@@ -137,6 +319,7 @@ header {
     gap: 1.5rem;
 }
 
+/* Transición suave para el efecto hover premium en las tarjetas */
 .grid-layout .member-card {
     background-color: white;
     border: 1px solid #e0e0e0;
@@ -144,17 +327,34 @@ header {
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efecto hover premium de elevación */
+.grid-layout .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor para que las imágenes tengan el mismo tamaño y no desajusten las tarjetas */
+.grid-layout .member-image-container {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
 }
 
 .grid-layout .member-card img {
     max-width: 150px;
     height: auto;
+    max-height: 100%;
     object-fit: contain;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     display: block;
 }
 
-/* Updated styles to target h2 inside grid layout cards */
 .grid-layout .member-card h2 {
     margin: 0.5rem 0;
     color: #003366;
@@ -174,20 +374,25 @@ header {
 .list-layout {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
+/* SOLUCIÓN BADGE: Se añade position relative explícito también para las tarjetas en list-layout */
 .list-layout .member-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 1.2rem 6rem 1.2rem 1.2rem; /* Añade un espacio extra a la derecha para que el badge no pise el texto */
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .list-layout .member-card img {
     display: none;
 }
 
-/* Updated styles to target h2 inside list layout cards */
 .list-layout .member-card h2 {
     margin: 0 0 0.5rem 0;
     color: #003366;
@@ -199,7 +404,22 @@ header {
     font-size: 0.9rem;
 }
 
-/* --- Footer --- */
+/* Estilos para las Insignias del Directorio */
+.member-card .badge {
+    position: absolute;
+    top: 15px; /* Ajustado para que se alinee mejor visualmente */
+    right: 15px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 10;
+}
+.member-card .badge.gold { background-color: #ffd700; color: #222; }
+.member-card .badge.silver { background-color: #c0c0c0; color: #222; }
+.member-card .badge.regular { background-color: #e0e0e0; color: #666; }
+
+/* --- Shared Footer (Consistente para index y directory) --- */
 footer {
     background-color: #222222;
     color: #ffffff;

@@ -1,94 +1,135 @@
-@media only screen and (min-width: 64rem) {
+/* ==========================================================================
+   W03: CHAMBER PROJECT - DESKTOP STYLES (Desde 1024px / 64rem) - larger.css
+   ========================================================================== */
+
+@media (min-width: 64rem) {
+
+    /* --- 1. Ocultar Hamburguesa y Forzar Navegación Horizontal --- */
+    #menu-toggle {
+        display: none !important; /* Esfuma el botón de las tres líneas en PC */
+    }
+
     header {
         padding: 1rem 2rem;
     }
 
-    .header-title {
-        font-size: 1.5rem;
-    }
-
-    #menu-toggle {
-        display: none;
-    }
-
     #nav-menu {
-        display: block !important;
-        position: static;
+        display: block !important; /* Evita que se quede oculto en PC */
+        position: static;          /* Elimina el posicionamiento absoluto del móvil */
         width: auto;
-        background: none;
+        background-color: transparent;
         box-shadow: none;
     }
 
     #nav-menu ul {
-        display: flex;
+        display: flex !important;  /* Alinea los enlaces uno al lado del otro */
+        flex-direction: row;
         gap: 1.5rem;
     }
 
     #nav-menu ul li a {
         border-bottom: none;
         padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
     }
 
-    .directory-header {
+    #nav-menu ul li a:hover,
+    #nav-menu ul li a.active {
+        background-color: #002244; /* Resalta el botón activo/enfoque */
+    }
+
+    /* --- 2. Rejilla Principal de Inicio (index.html) --- */
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Columna ancha para eventos y estrecha para clima */
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Hero Section expandida a dos columnas */
+    .hero-container {
+        grid-column: 1 / -1; /* Ocupa todo el ancho */
+        display: grid;
+        grid-template-columns: 1.2fr 1fr; /* Imagen izquierda, texto derecha */
+        height: 350px;
+    }
+
+    .hero-img {
+        height: 100%;
+    }
+
+    .hero-cta {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1rem;
-        margin: 2rem auto 1rem auto;
-    }
-
-    .directory-header h1 {
-        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         text-align: left;
+        padding: 2.5rem;
     }
 
-    /* 3-Column Grid Distribution */
+    /* Sección de Miembros Destacados (Spotlights) */
+    .spotlights-section {
+        grid-column: 1 / -1; /* Fila completa abajo */
+        margin-top: 1rem;
+    }
+
+    .spotlights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas perfectas */
+        gap: 2rem;
+    }
+
+    .spotlight-card {
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    }
+
+    .spotlight-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 51, 102, 0.1);
+    }
+
+    /* --- 3. Rejilla de la Página del Directorio (directory.html) --- */
+    #directory-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
     .grid-layout {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    /* Clean Rows for List View */
-    .list-layout {
-        max-width: 1200px;
-        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr); /* Vista de cuadrícula en 3 columnas */
+        gap: 2rem;
     }
 
     .list-layout .member-card {
-        flex-direction: row;
+        flex-direction: row; /* Alineación horizontal tipo fila en PC */
         justify-content: space-between;
         align-items: center;
-        text-align: left;
-        padding: 0.75rem 1rem;
+        padding: 1.2rem 2rem;
     }
 
-    /* Target h2 inside desktop row elements */
     .list-layout .member-card h2 {
-        flex: 1.5;
+        flex: 1;
         margin: 0;
     }
-    
-    .list-layout .member-card .address,
-    .list-layout .member-card .phone,
-    .list-layout .member-card .website,
-    .list-layout .member-card .membership-level {
-        flex: 2;
-        margin: 0 0.5rem;
-    }
-    
-    .list-layout .member-card .membership-level {
+
+    .list-layout .member-card p {
         flex: 1;
-        text-align: right;
+        margin: 0;
+        text-align: left;
+    }
+
+    /* --- 4. Footer Consistente --- */
+    footer {
+        padding: 2rem;
     }
 
     .footer-container {
-        flex-direction: row;
+        flex-direction: row; /* Contacto a la izquierda, detalles a la derecha */
         justify-content: space-between;
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0.5rem 0;
     }
 
     .footer-contact {

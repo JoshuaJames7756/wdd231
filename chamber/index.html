@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cochabamba Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Cochabamba Chamber of Commerce. Connecting, supporting, and growing local businesses in Cochabamba, Bolivia. Developed by Edgar Joshua James Miranda for WDD 231.">
+    <meta name="author" content="Edgar Joshua James Miranda">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Home - Cochabamba Chamber of Commerce">
+    <meta property="og:description" content="Welcome to the Cochabamba Chamber of Commerce. Discover local businesses and community events.">
+    <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/taquina.webp">
+    <meta property="og:url" content="https://joshuajames7756.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body class="home-page">
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">CCC</div>
+            <div class="header-title">Cochabamba Chamber of Commerce</div>
+        </div>
+        <button id="menu-toggle" aria-label="Open navigation menu">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero-container">
+            <picture>
+                <source media="(min-width: 64rem)" srcset="images/hero-large.jpg">
+                <img src="images/hero-small.jpg" alt="Panoramic view of Cochabamba city" class="hero-img" loading="eager">
+            </picture>
+            <div class="hero-cta">
+                <h3>Empower Your Business</h3>
+                <p>Join the largest professional network in Cochabamba and accelerate your brand's growth.</p>
+                <a href="#" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="card events-card">
+            <h3>Upcoming Events</h3>
+            <hr>
+            <ul class="events-list">
+                <li>
+                    <strong>International Cochabamba Fair (FEICOBOL)</strong>
+                    <p>The largest trade, business, and networking showcase in the region held at Alalay.</p>
+                </li>
+                <li>
+                    <strong>Digital Transformation Workshop</strong>
+                    <p>Learn actionable e-commerce strategies for local SMEs this weekend.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card weather-card">
+            <h3>Weather in Cochabamba</h3>
+            <hr>
+            <div class="weather-info">
+                <div class="current-weather">
+                    <p class="temp-display" id="current-temp">--°C</p>
+                    <p class="desc-display" id="weather-desc">Loading weather...</p>
+                </div>
+                <div class="forecast-section">
+                    <h4>3-Day Forecast</h4>
+                    <div id="forecast-container" class="forecast-list">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlights-section">
+            <h3>Featured Members</h3>
+            <div id="spotlights-container" class="spotlights-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h2>Cochabamba Chamber of Commerce</h2>
+                <p>📍 Ballivián Ave N-782, Cochabamba, Bolivia</p>
+                <p>📞 +591 4 4251234 | ✉️ info@camaracbba.bo</p>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="current-year"></span> | Edgar Joshua James Miranda | Cochabamba, Bolivia</p>
+                <p>Course: WDD 231 | Web Frontend Development I</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/weather-spot.js" defer></script>
+</body>
+</html>
