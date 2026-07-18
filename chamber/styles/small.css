@@ -177,34 +177,20 @@ header {
     text-align: center;
 }
 
-.hero-cta h3 {
+/* Adaptado a H2 para mantener consistencia visual con la nueva estructura */
+.hero-cta h2 {
     margin: 0 0 0.5rem 0;
     font-size: 1.4rem;
     color: #ffb300;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #ffb300;
-    color: #002244;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-    transition: background 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: #ffa000;
-}
-
-/* Eventos y Clima */
-.events-card h3,
-.weather-card h3,
-.spotlights-section h3 {
+/* Eventos, Clima y Spotlights adaptados a H2 */
+.events-card h2,
+.weather-card h2,
+.spotlights-section h2 {
     color: #003366;
     margin-top: 0;
+    font-size: 1.5rem;
 }
 
 .events-list {
@@ -238,6 +224,13 @@ header {
     margin: 0 0 1rem 0;
 }
 
+/* Adaptado el subtítulo del pronóstico a H3 */
+.weather-card h3 {
+    color: #003366;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
 .forecast-list {
     display: flex;
     flex-direction: column;
@@ -250,6 +243,22 @@ header {
     justify-content: space-between;
     padding: 0.4rem 0;
     border-bottom: 1px dotted #ccc;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffb300;
+    color: #002244;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffa000;
 }
 
 /* Spotlights */
@@ -268,9 +277,11 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+/* Las tarjetas dinámicas inyectadas mantienen un título interno H3 */
 .spotlight-card h3 {
     color: #003366;
     margin: 0.5rem 0;
+    font-size: 1.3rem;
 }
 
 .spotlight-card img {

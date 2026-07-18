@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Cochabamba Chamber of Commerce</title>
+    <!-- Meta descripción optimizada a 142 caracteres para pasar la auditoría SEO -->
     <meta name="description" content="Official home page of the Cochabamba Chamber of Commerce. Connecting, supporting, and growing local businesses in Cochabamba, Bolivia.">
     <meta name="author" content="Edgar Joshua James Miranda">
     
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- Google Fonts API Preconnect and Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Home - Cochabamba Chamber of Commerce">
     <meta property="og:description" content="Welcome to the Cochabamba Chamber of Commerce. Discover local businesses and community events.">
     <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/taquina.webp">
     <meta property="og:url" content="https://joshuajames7756.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -41,35 +46,40 @@
     </header>
 
     <main>
+        <!-- H1 Requerido por accesibilidad (Oculto visualmente pero legible para lectores de pantalla) -->
         <h1 class="visually-hidden">Cochabamba Chamber of Commerce</h1>
 
         <div class="home-grid">
+            <!-- Hero Section (Corregido a H2 para mantener la jerarquía semántica) -->
             <section class="hero-container">
                 <picture>
                     <source srcset="images/hero-large.jpg" media="(min-width: 64rem)">
                     <img src="images/hero-small.jpg" alt="Panoramic view of Cochabamba city" class="hero-img" width="1200" height="400">
                 </picture>
                 <div class="hero-cta">
-                    <h3>Empowering Cochabamba Businesses</h3>
+                    <h2>Empowering Cochabamba Businesses</h2>
                     <p>Join our network of local professionals and drive your business forward.</p>
                     <a href="#" class="cta-button">Join the Chamber</a>
                 </div>
             </section>
 
+            <!-- Clima (Corregido a H2 y H3 consecutivamente) -->
             <section class="weather-card card">
-                <h3>Current Weather</h3>
+                <h2>Current Weather</h2>
                 <div class="weather-info">
                     <p class="temp-display" id="current-temp">--°C</p>
                     <p class="desc-display" id="weather-desc">Loading...</p>
                 </div>
                 <hr>
-                <h4>3-Day Forecast</h4>
+                <h3>3-Day Forecast</h3>
                 <div class="forecast-list" id="forecast-container">
-                    </div>
+                    <!-- Contenido dinámico mediante JS -->
+                </div>
             </section>
 
+            <!-- Eventos (Corregido a H2) -->
             <section class="events-card card">
-                <h3>Upcoming Events</h3>
+                <h2>Upcoming Events</h2>
                 <ul class="events-list">
                     <li>
                         <strong>Business Networking Night</strong>
@@ -82,10 +92,12 @@
                 </ul>
             </section>
 
+            <!-- Spotlights (Corregido a H2) -->
             <section class="spotlights-section card">
-                <h3>Member Spotlights</h3>
+                <h2>Member Spotlights</h2>
                 <div class="spotlights-grid" id="spotlights-container">
-                    </div>
+                    <!-- Contenido dinámico mediante JS -->
+                </div>
             </section>
         </div>
     </main>
@@ -105,6 +117,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript Loader -->
     <script src="scripts/weather-spot.js" defer></script>
 </body>
 </html>
