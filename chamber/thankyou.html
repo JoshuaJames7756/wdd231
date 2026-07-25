@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory - Cochabamba Chamber of Commerce</title>
-    <meta name="description" content="Official member directory of the Cochabamba Chamber of Commerce. Developed by Edgar Joshua James Miranda for WDD 231.">
+    <title>Thank You - Cochabamba Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to the Cochabamba Chamber of Commerce.">
     <meta name="author" content="Edgar Joshua James Miranda">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -15,19 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Directory - Cochabamba Chamber of Commerce">
-    <meta property="og:description" content="Find and connect with outstanding local businesses in Cochabamba, Bolivia.">
-    <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/taquina.webp">
-    <meta property="og:url" content="https://joshuajames7756.github.io/wdd231/chamber/directory.html">
-    <meta property="og:type" content="website">
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
-<body class="directory-page">
+<body class="thankyou-page">
     <header>
         <div class="logo-container">
             <div class="logo-badge">CCC</div>
@@ -38,25 +31,39 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Discover</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="directory-header">
-            <h1>Business Directory</h1>
-            
-            <div class="view-toggle">
-                <!-- Botones limpios, sin emojis toscos -->
-                <button id="grid-view" class="active" aria-label="Grid view">Grid View</button>
-                <button id="list-view" aria-label="List view">List View</button>
-            </div>
-        </div>
+        <div class="thankyou-container card">
+            <h1>Thank You for Applying!</h1>
+            <p>We've received your membership application. Our team will contact you shortly.</p>
 
-        <!-- Dynamic Content Container -->
-        <div id="directory-container" class="grid-layout"></div>
+            <dl class="submission-summary">
+                <dt>First Name</dt>
+                <dd id="out-first-name"></dd>
+
+                <dt>Last Name</dt>
+                <dd id="out-last-name"></dd>
+
+                <dt>Email</dt>
+                <dd id="out-email"></dd>
+
+                <dt>Mobile Phone</dt>
+                <dd id="out-phone"></dd>
+
+                <dt>Business/Organization</dt>
+                <dd id="out-org-name"></dd>
+
+                <dt>Submitted On</dt>
+                <dd id="out-timestamp"></dd>
+            </dl>
+
+            <a href="index.html" class="cta-button">Back to Home</a>
+        </div>
     </main>
 
     <footer>
@@ -74,7 +81,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript Loader -->
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </body>
 </html>

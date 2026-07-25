@@ -1,7 +1,7 @@
 // scripts/weather-spot.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. Navigation Menu Control ---
+    // --- 1. Navigation Menu Control (idéntico a directory.js / join.js) ---
     const menuToggle = document.querySelector("#menu-toggle");
     const navMenu = document.querySelector("#nav-menu");
 
@@ -9,12 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.addEventListener("click", () => {
             navMenu.classList.toggle("open");
             if (navMenu.classList.contains("open")) {
-                menuToggle.textContent = "X"; // Solución: X de texto elegante en lugar de la equis roja emoji
-                menuToggle.classList.add("open"); // Permite aplicar los estilos de rotación y color del CSS
+                menuToggle.innerHTML = "&#10005;";
                 menuToggle.setAttribute("aria-label", "Close navigation menu");
             } else {
-                menuToggle.textContent = "☰";
-                menuToggle.classList.remove("open");
+                menuToggle.innerHTML = "&#9776;";
                 menuToggle.setAttribute("aria-label", "Open navigation menu");
             }
         });
@@ -51,14 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchWeather() {
         try {
-            // Fetch Current Weather
             const responseWeather = await fetch(weatherUrl);
             if (responseWeather.ok) {
                 const currentData = await responseWeather.json();
                 displayCurrentWeather(currentData);
+            } else {
+                handleWeatherError();
             }
 
-            // Fetch Forecast
             const responseForecast = await fetch(forecastUrl);
             if (responseForecast.ok) {
                 const forecastData = await responseForecast.json();
@@ -66,34 +64,40 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching weather data:", error);
+            handleWeatherError();
         }
     }
 
+    function handleWeatherError() {
+        const tempElement = document.querySelector("#current-temp");
+        const descElement = document.querySelector("#weather-desc");
+        if (tempElement) tempElement.textContent = "--°C";
+        if (descElement) descElement.textContent = "Weather unavailable";
+    }
+
     function displayCurrentWeather(data) {
-        const tempElement = document.getElementById("current-temp");
-        const descElement = document.getElementById("weather-desc");
+        const tempElement = document.querySelector("#current-temp");
+        const descElement = document.querySelector("#weather-desc");
         if (tempElement && descElement) {
             tempElement.innerHTML = `${Math.round(data.main.temp)}°C`;
-            // Capitalizar la descripción del clima
             const description = data.weather[0].description;
             descElement.textContent = description.charAt(0).toUpperCase() + description.slice(1);
         }
     }
 
     function displayForecast(data) {
-        const forecastContainer = document.getElementById("forecast-container");
+        const forecastContainer = document.querySelector("#forecast-container");
         if (!forecastContainer) return;
 
         forecastContainer.innerHTML = "";
-        
-        // Filtrar lecturas diarias del mediodía (12:00:00) para obtener 3 días consecutivos
+
         const dailyData = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
 
         dailyData.forEach(day => {
             const date = new Date(day.dt * 1000);
             const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
             const temp = Math.round(day.main.temp);
-            
+
             const forecastHTML = `
                 <div class="forecast-day">
                     <span class="day-name">${dayName}</span>
@@ -110,19 +114,22 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchSpotlights() {
         try {
             const response = await fetch(membersUrl);
-            if (response.ok) {
-                const members = await response.json();
-                
-                // Filtrar niveles Gold (3) y Silver (2)
-                const premiumMembers = members.filter(member => member.level === 3 || member.level === 2);
-                
-                // Obtener entre 2 y 3 aleatorios
-                const selectedMembers = getRandomMembers(premiumMembers, 3);
-                
-                displaySpotlights(selectedMembers);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            const members = await response.json();
+            const premiumMembers = members.filter(member => member.level === 3 || member.level === 2);
+
+            // Entre 2 y 3 miembros, aleatorio en cada render
+            const count = Math.random() < 0.5 ? 2 : 3;
+            const selectedMembers = getRandomMembers(premiumMembers, count);
+
+            displaySpotlights(selectedMembers);
         } catch (error) {
             console.error("Error loading spotlights:", error);
+            const container = document.querySelector("#spotlights-container");
+            if (container) {
+                container.innerHTML = `<p class="error">Unable to load member spotlights at this time.</p>`;
+            }
         }
     }
 
@@ -132,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displaySpotlights(members) {
-        const spotlightsContainer = document.getElementById("spotlights-container");
+        const spotlightsContainer = document.querySelector("#spotlights-container");
         if (!spotlightsContainer) return;
 
         spotlightsContainer.innerHTML = "";
@@ -140,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         members.forEach(member => {
             const card = document.createElement("div");
             card.className = "spotlight-card";
-            
+
             const levelName = member.level === 3 ? "Gold" : "Silver";
             const levelClass = levelName.toLowerCase();
 

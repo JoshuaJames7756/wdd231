@@ -139,4 +139,21 @@
     .footer-info {
         text-align: right;
     }
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr; /* form ancho a la izquierda, cards a la derecha */
+        gap: 2rem;
+        padding: 2rem;
+        align-items: start;
+    }
+    
+    .membership-cards {
+        position: sticky;
+        top: 1.5rem;
+    }
+    
+    .join-header {
+        padding: 0 2rem;
+    }
 }
