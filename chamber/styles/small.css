@@ -763,3 +763,118 @@ footer {
     margin: 0.2rem 0 0 0;
     color: #333333;
 }
+
+/* ==========================================================================
+   W05: DISCOVER PAGE - Agregar al final de small.css
+   ========================================================================== */
+
+/* --- Discover Header --- */
+.discover-header {
+    max-width: 1200px;
+    margin: 1.5rem auto 1rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.discover-header h1 {
+    color: #003366;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+}
+
+.discover-header p {
+    color: #555555;
+    margin: 0;
+}
+
+/* --- Discover Grid: Mobile (320px - 640px) ---
+   Single stacked column. Named areas still used so the
+   HTML/JS stays identical across breakpoints. */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Discover Card --- */
+.discover-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card figure {
+    margin: 0 0 1rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card h2 {
+    color: #003366;
+    margin: 0 0 0.4rem 0;
+    font-size: 1.2rem;
+}
+
+.discover-card address {
+    font-style: normal;
+    color: #666666;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+}
+
+.discover-card p {
+    color: #333333;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.learn-more-btn {
+    align-self: flex-start;
+    background-color: #ffffff;
+    color: #003366;
+    border: 2px solid #003366;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+/* --- Last Visit Message (footer) --- */
+.visit-message {
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #444444;
+    font-style: italic;
+    color: #ffb300;
+}

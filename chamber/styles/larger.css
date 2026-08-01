@@ -156,4 +156,80 @@
     .join-header {
         padding: 0 2rem;
     }
+    /* ==========================================================================
+    W05: DISCOVER PAGE (Desktop) - Agregar dentro del
+    @media (min-width: 64rem) existente en larger.css
+    ========================================================================== */
+
+    .discover-header {
+        padding: 0 2rem;
+    }
+
+    /* --- Discover Grid: Desktop (1025px+) ---
+    3-column asymmetric layout: featured item spans 2 columns,
+    the rest arranged in a distinct named pattern (not a plain
+    auto-repeating grid). */
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "a a b"
+            "c d e"
+            "f g h";
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .discover-grid > .discover-card:first-child {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        column-gap: 1.5rem;
+        align-items: start;
+    }
+
+    .discover-grid > .discover-card:first-child figure {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        margin: 0;
+        height: 100%;
+    }
+
+    .discover-grid > .discover-card:first-child img {
+        height: 100%;
+    }
+
+    .discover-grid > .discover-card:first-child h2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .discover-grid > .discover-card:first-child address {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .discover-grid > .discover-card:first-child p {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .discover-grid > .discover-card:first-child .learn-more-btn {
+        grid-column: 2;
+        grid-row: 4;
+        justify-self: start;
+    }
+
+    /* --- Hover effect on images: desktop only --- */
+    .discover-card figure {
+        position: relative;
+    }
+
+    .discover-card img {
+        transition: transform 0.35s ease;
+    }
+
+    .discover-card:hover img {
+        transform: scale(1.08);
+    }
 }
+

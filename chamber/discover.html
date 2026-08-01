@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Cochabamba Chamber of Commerce</title>
-    <meta name="description" content="Thank you for applying to the Cochabamba Chamber of Commerce.">
+    <title>Discover - Cochabamba Chamber of Commerce</title>
+    <meta name="description" content="Discover Cochabamba, Bolivia — explore the city's landmarks, markets, museums, and natural attractions with the Chamber of Commerce.">
     <meta name="author" content="Edgar Joshua James Miranda">
 
     <!-- Favicon -->
@@ -15,12 +15,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Discover - Cochabamba Chamber of Commerce">
+    <meta property="og:description" content="Explore the landmarks, markets, and natural beauty of Cochabamba, Bolivia.">
+    <meta property="og:image" content="https://joshuajames7756.github.io/wdd231/chamber/images/taquina.webp">
+    <meta property="og:url" content="https://joshuajames7756.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
-<body class="thankyou-page">
+<body class="discover-page">
     <header>
         <div class="logo-container">
             <div class="logo-badge">CCC</div>
@@ -30,39 +38,21 @@
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="thankyou-container card">
-            <h1>Thank You for Applying!</h1>
-            <p>We've received your membership application. Our team will contact you shortly.</p>
+        <div class="discover-header">
+            <h1>Discover Cochabamba</h1>
+            <p>Explore the landmarks, markets, and natural beauty that make our city a great place to live, work, and visit.</p>
+        </div>
 
-            <dl class="submission-summary">
-                <dt>First Name</dt>
-                <dd id="out-first-name"></dd>
-
-                <dt>Last Name</dt>
-                <dd id="out-last-name"></dd>
-
-                <dt>Email</dt>
-                <dd id="out-email"></dd>
-
-                <dt>Mobile Phone</dt>
-                <dd id="out-phone"></dd>
-
-                <dt>Business/Organization</dt>
-                <dd id="out-org-name"></dd>
-
-                <dt>Submitted On</dt>
-                <dd id="out-timestamp"></dd>
-            </dl>
-
-            <a href="index.html" class="cta-button">Back to Home</a>
+        <div id="discover-grid" class="discover-grid">
+            <!-- 8 cards inyectadas dinámicamente por discover.js -->
         </div>
     </main>
 
@@ -77,10 +67,11 @@
                 <p>&copy; <span id="current-year"></span> | Edgar Joshua James Miranda | Cochabamba, Bolivia</p>
                 <p>Course: WDD 231 | Web Frontend Development I</p>
                 <p id="last-modified"></p>
+                <p id="visit-message" class="visit-message"></p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/thankyou.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
 </body>
 </html>
