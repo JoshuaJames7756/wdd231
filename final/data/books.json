@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": "Raza de bronce",
+    "author": "Alcides Arguedas",
+    "genre": "Fiction",
+    "price": 65.0,
+    "cover": "images/books/raza-de-bronce.jpg",
+    "description": "A foundational novel of Bolivian indigenismo, set on the altiplano in the early 20th century."
+  },
+  {
+    "id": 2,
+    "title": "Felipe Delgado",
+    "author": "Jaime Saenz",
+    "genre": "Fiction",
+    "price": 70.0,
+    "cover": "images/books/felipe-delgado.jpg",
+    "description": "A hallucinatory, nocturnal portrait of La Paz through a character living on society's margins."
+  },
+  {
+    "id": 3,
+    "title": "Los deshabitados",
+    "author": "Marcelo Quiroga Santa Cruz",
+    "genre": "Fiction",
+    "price": 60.0,
+    "cover": "images/books/los-deshabitados.jfif",
+    "description": "A novel that blends politics and fiction in mid-20th-century Bolivia."
+  },
+  {
+    "id": 4,
+    "title": "Norte",
+    "author": "Edmundo Paz Soldan",
+    "genre": "Fiction",
+    "price": 75.0,
+    "cover": "images/books/norte.jpg",
+    "description": "Three interwoven stories explore Bolivian migration to the United States."
+  },
+  {
+    "id": 5,
+    "title": "El delirio de Turing",
+    "author": "Edmundo Paz Soldan",
+    "genre": "Science Fiction",
+    "price": 68.0,
+    "cover": "images/books/el-delirio-de-turing.jpg",
+    "description": "A tech thriller about surveillance, hackers, and power in a near-present Bolivia."
+  },
+  {
+    "id": 6,
+    "title": "Ustedes brillan en lo oscuro",
+    "author": "Liliana Colanzi",
+    "genre": "Short Stories",
+    "price": 58.0,
+    "cover": "images/books/ustedes-brillan-en-lo-oscuro.jpg",
+    "description": "A short story collection blending science fiction, Andean myth, and nuclear disaster."
+  },
+  {
+    "id": 7,
+    "title": "Nuestro mundo muerto",
+    "author": "Liliana Colanzi",
+    "genre": "Short Stories",
+    "price": 55.0,
+    "cover": "images/books/nuestro-mundo-muerto.jfif",
+    "description": "Short stories where the fantastic breaks into everyday Bolivian landscapes."
+  },
+  {
+    "id": 8,
+    "title": "El sonido de la H",
+    "author": "Magela Baudoin",
+    "genre": "Fiction",
+    "price": 62.0,
+    "cover": "images/books/el-sonido-de-la-h.jfif",
+    "description": "A woman's perspective questions the silence surrounding family and social conflict."
+  },
+  {
+    "id": 9,
+    "title": "Los afectos",
+    "author": "Rodrigo Hasbun",
+    "genre": "Fiction",
+    "price": 64.0,
+    "cover": "images/books/los-afectos.jfif",
+    "description": "A German family settled in Bolivia fractures amid ideals and disappointments."
+  },
+  {
+    "id": 10,
+    "title": "El lugar del cuerpo",
+    "author": "Rodrigo Hasbun",
+    "genre": "Short Stories",
+    "price": 52.0,
+    "cover": "images/books/el-lugar-del-cuerpo.jfif",
+    "description": "Stories that explore the fragility of intimate and family bonds."
+  },
+  {
+    "id": 11,
+    "title": "American Visa",
+    "author": "Juan de Recacoechea",
+    "genre": "Fiction",
+    "price": 59.0,
+    "cover": "images/books/american-visa.jfif",
+    "description": "A La Paz professor faces bureaucracy and disillusionment while seeking a U.S. visa."
+  },
+  {
+    "id": 12,
+    "title": "Altiplano",
+    "author": "Juan de Recacoechea",
+    "genre": "Crime Fiction",
+    "price": 61.0,
+    "cover": "images/books/altiplano.jfif",
+    "description": "Intrigue and ambition collide in the heights of La Paz in this crime novel."
+  },
+  {
+    "id": 13,
+    "title": "98 segundos sin sombra",
+    "author": "Giovanna Rivero",
+    "genre": "Fiction",
+    "price": 63.0,
+    "cover": "images/books/98-segundos-sin-sombra.jfif",
+    "description": "A teenager from Santa Cruz narrates a summer marked by loss and awakening."
+  },
+  {
+    "id": 14,
+    "title": "Tukzon",
+    "author": "Giovanna Rivero",
+    "genre": "Short Stories",
+    "price": 56.0,
+    "cover": "images/books/tukzon.jfif",
+    "description": "Stories of Bolivian migrants rebuilding their identity in southern Arizona."
+  },
+  {
+    "id": 15,
+    "title": "Aluvion de fuego",
+    "author": "Oscar Cerruto",
+    "genre": "Fiction",
+    "price": 57.0,
+    "cover": "images/books/aluvion-de-fuego.jfif",
+    "description": "A classic novel set during the Chaco War and its human toll."
+  },
+  {
+    "id": 16,
+    "title": "Jonas y la ballena rosada",
+    "author": "Wolfango Montes",
+    "genre": "Fiction",
+    "price": 54.0,
+    "cover": "images/books/jonas-y-la-ballena-rosada.jfif",
+    "description": "A town in Bolivia's eastern lowlands is shaken by the arrival of strangers and rumors."
+  },
+  {
+    "id": 17,
+    "title": "Coba, la ciudad que arde",
+    "author": "Victor Hugo Viscarra",
+    "genre": "Nonfiction",
+    "price": 50.0,
+    "cover": "images/books/coba-la-ciudad-que-arde.jfif",
+    "description": "Raw chronicles of marginal life on the streets of La Paz."
+  },
+  {
+    "id": 18,
+    "title": "Valentina",
+    "author": "Magdalena Cajias",
+    "genre": "Biography",
+    "price": 66.0,
+    "cover": "images/books/valentina.jfif",
+    "description": "A biographical portrait of a Bolivian woman shaped by the country's political history."
+  }
+] 

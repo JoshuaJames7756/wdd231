@@ -1,0 +1,167 @@
+.catalog-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.catalog-controls select {
+  font-family: var(--font-body);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catalog-controls select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(166, 50, 11, 0.15);
+}
+
+#results-count {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 560px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(46, 33, 24, 0.15);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: var(--color-bg-alt);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.book-card:hover img {
+  transform: scale(1.03);
+}
+
+.book-card h2 {
+  font-size: 1.15rem;
+  margin: 0.25rem 0 0;
+}
+
+.book-author {
+  font-style: italic;
+  margin: 0;
+}
+
+.book-genre {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.book-price {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+
+.loading-message,
+.empty-message,
+.error-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+/* ---------- Modal ---------- */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes backdropFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+dialog#book-modal {
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  max-width: 480px;
+  width: 90%;
+  padding: 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  animation: modalPop 0.25s ease;
+}
+
+dialog#book-modal::backdrop {
+  background-color: rgba(46, 33, 24, 0.6);
+  animation: backdropFade 0.25s ease;
+}
+
+#modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#modal-close:hover,
+#modal-close:focus {
+  color: var(--color-accent);
+  transform: rotate(90deg);
+}
+
+#modal-content img {
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  aspect-ratio: 2 / 3;
+  max-width: 200px;
+  object-fit: cover;
+}

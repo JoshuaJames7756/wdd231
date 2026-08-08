@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joshua">
+  <meta name="description" content="Contact The Page & Ink Bookstore, pre-order a book, request in-store pickup, or join our newsletter.">
+
+  <meta property="og:title" content="Contact & Pre-Order | The Page & Ink Bookstore">
+  <meta property="og:description" content="Pre-order a title, request pickup, or join our book club newsletter.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.jpg">
+
+  <title>Contact &amp; Pre-Order | The Page &amp; Ink Bookstore</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">The Page &amp; Ink</a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="contact.html">Contact &amp; Pre-Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <h1>Contact &amp; Pre-Order</h1>
+
+    <div class="contact-layout">
+
+      <section class="card" id="store-details">
+        <h2>Get in Touch</h2>
+        <p><strong>Address:</strong> Nataniel Aguirre N&deg; 0276, Plaza 14 de Septiembre, Cochabamba, Bolivia</p>
+        <p><strong>Phone:</strong> (555) 214-0192</p>
+        <p><strong>Hours:</strong> Mon&ndash;Sat, 9am&ndash;7pm &middot; Sun, 11am&ndash;5pm</p>
+      </section>
+
+      <section class="card" id="order-form-section">
+        <h2>Pre-Order / Pickup Request</h2>
+        <form id="order-form" action="thankyou.html" method="get">
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="book-title">Book Title</label>
+          <input type="text" id="book-title" name="bookTitle" required>
+
+          <fieldset>
+            <legend>Request Type</legend>
+            <label class="radio-label">
+              <input type="radio" name="requestType" value="preorder" checked> Pre-Order
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="requestType" value="pickup"> In-Store Pickup Request
+            </label>
+          </fieldset>
+
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            Sign me up for the book club newsletter
+          </label>
+
+          <button type="submit" class="btn">Submit Request</button>
+        </form>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 The Page &amp; Ink Bookstore</p>
+    <div class="footer-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="#" target="_blank" rel="noopener">Video Demo</a>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joshua">
+  <meta name="description" content="The Page & Ink Bookstore — a neighborhood bookstore with an online catalog, pre-orders, and in-store pickup.">
+
+  <meta property="og:title" content="The Page & Ink Bookstore">
+  <meta property="og:description" content="Browse our catalog, pre-order your next read, and stop by for pickup.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.jpg">
+
+  <title>Home | The Page & Ink Bookstore</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">The Page &amp; Ink</a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="contact.html">Contact &amp; Pre-Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero card">
+      <h1>The Page &amp; Ink Bookstore</h1>
+      <p>A neighborhood bookstore that lives both on the shelf and online. Browse the catalog,
+        reserve a title for pickup, or stop by and stay a while.</p>
+      <a href="catalog.html" class="btn">Browse the Catalog</a>
+    </section>
+
+    <section id="location-map">
+      <div id="store-info" class="location-block">
+        <h2>Visit Us</h2>
+        <p><strong>Hours:</strong> Mon&ndash;Sat, 9:00am &ndash; 7:00pm &middot; Sun, 11:00am &ndash; 5:00pm</p>
+        <p><strong>Location:</strong> Nataniel Aguirre N&deg; 0276, Plaza 14 de Septiembre, Cochabamba, Bolivia</p>
+      </div>
+      <div id="store-map" class="location-block">
+        <img src="images/store-map.png" alt="Map showing the location of The Page & Ink Bookstore" loading="lazy">
+      </div>
+    </section>
+
+    <section id="featured-books">
+      <h2>Featured Books</h2>
+      <div class="featured-grid" id="featured-grid">
+        <p class="loading-message">Loading featured titles&hellip;</p>
+      </div>
+    </section>
+
+    <section id="promo">
+      <h2>Current Promotions</h2>
+      <p>Join the book club newsletter for 15% off your first pre-order.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 The Page &amp; Ink Bookstore</p>
+    <div class="footer-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="#" target="_blank" rel="noopener">Video Demo</a>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/featured.js"></script>
+</body>
+</html>

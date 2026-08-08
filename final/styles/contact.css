@@ -1,0 +1,145 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form label {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  font-family: var(--font-body);
+  padding: 0.5rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(166, 50, 11, 0.15);
+}
+
+form fieldset {
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+}
+
+form legend {
+  font-weight: 600;
+  padding: 0 0.4rem;
+}
+
+.radio-label,
+.checkbox-label {
+  display: block;
+  font-weight: 400;
+  margin: 0.35rem 0;
+}
+
+form button {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+/* ---------- Success checkmark ---------- */
+
+.success-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkmark {
+  width: 72px;
+  height: 72px;
+}
+
+.checkmark-circle {
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  animation: circleDraw 0.5s ease forwards;
+}
+
+.checkmark-check {
+  stroke: var(--color-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 36;
+  stroke-dashoffset: 36;
+  animation: checkDraw 0.3s ease 0.5s forwards;
+}
+
+@keyframes circleDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes checkDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Thank-you summary ---------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#submission-summary {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.summary-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-bg-alt);
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.summary-row:nth-child(1) { animation-delay: 0.1s; }
+.summary-row:nth-child(2) { animation-delay: 0.18s; }
+.summary-row:nth-child(3) { animation-delay: 0.26s; }
+.summary-row:nth-child(4) { animation-delay: 0.34s; }
+.summary-row:nth-child(5) { animation-delay: 0.42s; }
+.summary-row:nth-child(6) { animation-delay: 0.5s; }
+
+.summary-label {
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 140px;
+}

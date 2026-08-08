@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --color-bg: #F5EFE3;
+  --color-bg-alt: #EDE3D0;
+  --color-text: #2E2118;
+  --color-primary: #6B4226;
+  --color-secondary: #8B5E3C;
+  --color-accent: #A6320B;
+  --color-gold: #B8860B;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
+
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-bottom: 4px solid var(--color-gold);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: block;
+  background: none;
+  border: 2px solid var(--color-bg);
+  border-radius: 4px;
+  color: var(--color-bg);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: rgba(245, 239, 227, 0.15);
+}
+
+.nav-toggle:active {
+  transform: scale(0.94);
+}
+
+.primary-nav {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.primary-nav.open ul {
+  max-height: 300px;
+}
+
+.primary-nav li {
+  border-top: 1px solid var(--color-secondary);
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  color: var(--color-bg-alt);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus,
+.primary-nav a[aria-current="page"] {
+  color: var(--color-gold);
+}
+
+@media (min-width: 700px) {
+  .primary-nav a::after {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0.5rem;
+    height: 2px;
+    background-color: var(--color-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  .primary-nav a:hover::after,
+  .primary-nav a:focus::after,
+  .primary-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (min-width: 700px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .primary-nav {
+    flex-basis: auto;
+    width: auto;
+  }
+
+  .primary-nav ul {
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .primary-nav li {
+    border-top: none;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-bg-alt);
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--color-gold);
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Shared layout helpers ---------- */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+}

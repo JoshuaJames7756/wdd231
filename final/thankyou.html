@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joshua">
+  <meta name="description" content="Confirmation page for your pre-order or pickup request at The Page & Ink Bookstore.">
+  <title>Thank You | The Page &amp; Ink Bookstore</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">The Page &amp; Ink</a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="contact.html">Contact &amp; Pre-Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="success-badge" aria-hidden="true">
+      <svg viewBox="0 0 52 52" class="checkmark">
+        <circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none"/>
+        <path class="checkmark-check" fill="none" d="M14 27l7 7 16-16"/>
+      </svg>
+    </div>
+    <h1>Thank You!</h1>
+    <p>Your request has been received. Here's what you submitted:</p>
+
+    <section class="card" id="submission-summary">
+      <!-- populated by thankyou.js -->
+    </section>
+
+    <a href="catalog.html" class="btn">Back to Catalog</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 The Page &amp; Ink Bookstore</p>
+    <div class="footer-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="#" target="_blank" rel="noopener">Video Demo</a>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/thankyou.js"></script>
+</body>
+</html>

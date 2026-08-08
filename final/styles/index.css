@@ -1,0 +1,151 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 55ch;
+  margin: 0 auto 1.25rem;
+}
+
+/* ---------- Location + Map ---------- */
+
+#location-map {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.location-block {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.5s ease both;
+  animation-delay: 0.1s;
+}
+
+.location-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(46, 33, 24, 0.12);
+}
+
+#store-map img {
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#store-map:hover img {
+  transform: scale(1.02);
+}
+
+#store-map {
+  overflow: hidden;
+}
+
+@media (min-width: 700px) {
+  #location-map {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Featured Books ---------- */
+
+#featured-books {
+  margin-bottom: 1.75rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 700px) {
+  .featured-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.featured-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  text-align: center;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.featured-card:nth-child(1) { animation-delay: 0.05s; }
+.featured-card:nth-child(2) { animation-delay: 0.12s; }
+.featured-card:nth-child(3) { animation-delay: 0.19s; }
+.featured-card:nth-child(4) { animation-delay: 0.26s; }
+
+.featured-card img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: var(--color-bg-alt);
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover img {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 18px rgba(46, 33, 24, 0.18);
+}
+
+.featured-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.15rem;
+  transition: color 0.2s ease;
+}
+
+.featured-card:hover h3 {
+  color: var(--color-accent);
+}
+
+.featured-card p {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0;
+  color: var(--color-secondary);
+}
+
+/* ---------- Promotions banner ---------- */
+
+#promo {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: 6px;
+  padding: 1.25rem;
+  text-align: center;
+  animation: fadeInUp 0.5s ease both;
+  animation-delay: 0.3s;
+}
+
+#promo h2 {
+  color: var(--color-bg);
+}
