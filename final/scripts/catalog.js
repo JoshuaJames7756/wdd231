@@ -12,8 +12,10 @@ const LAST_VIEWED_KEY = 'pageAndInk_lastViewedBook';
 
 let allBooks = [];
 
+// VIDEO: show the fetch to the local JSON + the async try/catch here
 async function loadBooks() {
   try {
+    // VIDEO: await fetch = requesting the JSON asynchronously
     const response = await fetch('data/books.json');
 
     if (!response.ok) {
@@ -27,6 +29,7 @@ async function loadBooks() {
     renderBooks(books);
     restoreLastViewed();
   } catch (error) {
+    // VIDEO: this catches if the fetch fails — try changing the path to "data/booksXYZ.json" and reload
     grid.innerHTML = `<p class="error-message">Sorry, the catalog could not be loaded right now. Please try again later.</p>`;
     console.error('Failed to load books:', error);
   }

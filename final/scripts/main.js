@@ -1,5 +1,6 @@
 // main.js — shared across all pages (ES Module)
 // Handles the responsive hamburger nav toggle.
+// VIDEO: show this file loaded with type="module" in the HTML + the exports below
 
 export function initNav() {
   const toggle = document.querySelector('.nav-toggle');
